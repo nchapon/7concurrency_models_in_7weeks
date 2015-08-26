@@ -8,3 +8,5 @@ pom.xml.asc
 chap03/.nrepl-port
 chap03/target
 chap03/target/classes
+/transcript-handler/target
+/transcript-handler/.hgignore
