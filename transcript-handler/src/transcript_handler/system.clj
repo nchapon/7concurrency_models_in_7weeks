@@ -1,8 +1,7 @@
 (ns transcript-handler.system
   (:require [org.httpkit.server :refer [run-server]]
-            [com.stuartsierra.component :as component]))
-
-
+            [com.stuartsierra.component :as component]
+            [transcript-handler.web :refer :all]))
 
 (defn- start-server [handler port]
   (let [server (run-server handler {:port port})]
@@ -13,13 +12,6 @@
   (when (server)
     (server))) ;; run-server returns a function that stops itself
 
-
-(defn app [req]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body "Hello Transcript !"})
-
-
 (defrecord TranscriptHandler []
     component/Lifecycle
     (start [this]
@@ -29,6 +21,9 @@
       (stop-server (:server this))
       (dissoc this :server)))
 
-
 (defn create-system []
   (TranscriptHandler.))
+
+
+(defn -main [& args]
+  (start-server #'app 9009))

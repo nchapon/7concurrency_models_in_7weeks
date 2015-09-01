@@ -1,0 +1,15 @@
+# -*- restclient -*-
+# Uses REST Client mode...
+# C-c C-v runs the query in another buffer
+# C-c C-p: jump to the previous query
+# C-c C-n: jump to the previous query
+
+# Test Carambar
+GET http://localhost:3000/
+
+# Add snippet
+# Todo : trouver un moyen que tout le body soit envoyé...
+PUT http://localhost:9009/snippet/1
+Content-Type: text/plain
+
+"Twas brillig, and the slithy toves"
