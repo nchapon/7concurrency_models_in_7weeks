@@ -1,9 +1,9 @@
 (ns translator.core
-  (:require [org.httpkit.server :refer [run-server]]
-            [compojure.core :refer :all]
+  (:require [clojure.string :as str]
             [com.stuartsierra.component :as component]
+            [compojure.core :refer :all]
+            [org.httpkit.server :refer [run-server]]
             [ring.util.response :refer [response]]))
-
 
 (def translations {
   "Twas brillig, and the slithy toves Did gyre and gimble in the wabe:"
@@ -48,9 +48,9 @@
 
 (defroutes app
   (POST "/translate" [:as {:keys [body]}]
-        (response (get translations (slurp body) "Untranslateable")))
+        (response (get translations (str/trim (slurp body)) "Untranslateable")))
   (POST "/test" {:keys [body]}
-        (response ((slurp body))))
+        (response (slurp body)))
   (GET "/test/:foo" [foo] ;; path param
         (response (str "Foo = " foo))))
 

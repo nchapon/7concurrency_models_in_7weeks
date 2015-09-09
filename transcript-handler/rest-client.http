@@ -4,7 +4,7 @@
 # C-c C-p: jump to the previous query
 # C-c C-n: jump to the previous query
 
-# Test Carambar
+# Test transcrpt-handler
 GET http://localhost:3000/
 
 # Add snippet
@@ -13,3 +13,12 @@ PUT http://localhost:9009/snippet/1
 Content-Type: text/plain
 
 "Twas brillig, and the slithy toves"
+
+
+#Test Translator
+POST http://localhost:3001/translate
+Content-Type: text/plain
+
+Callay!
+
+##
