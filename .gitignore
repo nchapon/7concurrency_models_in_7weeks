@@ -11,3 +11,6 @@ chap03/target/classes
 /transcript-handler/target
 /transcript-handler/.hgignore
 /transcript-handler/.nrepl-port
+/translator/target
+/translator/.hgignore
+/translator/.nrepl-port
