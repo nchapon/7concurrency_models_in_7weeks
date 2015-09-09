@@ -6,7 +6,8 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [http-kit "2.1.18"]
                  [compojure "1.3.4"]
-                 [com.stuartsierra/component "0.2.3"]]
+                 [com.stuartsierra/component "0.2.3"]
+                 [clj-http "2.0.0"]]
   :profiles {:dev {:plugins []
                    :dependencies [[reloaded.repl "0.1.0"]]
                    :source-paths ["dev"]}})
