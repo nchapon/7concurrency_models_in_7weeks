@@ -8,11 +8,14 @@
 GET http://localhost:3000/
 
 # Add snippet
-PUT http://localhost:3000/snippet/1
+PUT http://localhost:3000/snippet/0
 Content-Type: text/plain
 
-"Twas brillig, and the slithy toves"
+Callay!
 
+
+# Add snippet
+GET http://localhost:3000/translation/0
 
 #Test Translator
 POST http://localhost:3001/translate

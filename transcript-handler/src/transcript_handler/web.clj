@@ -5,6 +5,8 @@
             [ring.util.response :refer [response]]
             [transcript-handler.sentences :refer :all]))
 
+(def snippets (repeatedly promise))
+
 (def translator "http://localhost:3001/translate")
 
 (defn translate
@@ -13,8 +15,8 @@
   (future
     (:body (client/post translator {:body text}))))
 
-(def snippets (repeatedly promise))
-
+;; cache the body
+;; deref is blocking until promise is deliver
 (def translations
   (delay
    (map translate (strings->sentences (map deref snippets)))))
@@ -27,8 +29,7 @@
 (defn get-translation
   ""
   [n]
-  @(nth n @translations))
-
+  @(nth @translations n)) ;; deref delay and the translate future
 
 
 (defroutes app
