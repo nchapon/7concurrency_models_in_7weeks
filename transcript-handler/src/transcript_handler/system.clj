@@ -15,7 +15,7 @@
 (defrecord TranscriptHandler []
     component/Lifecycle
     (start [this]
-      (assoc this :server (start-server #'app 9009)))
+      (assoc this :server (start-server #'app 3000)))
 
     (stop [this]
       (stop-server (:server this))
@@ -26,4 +26,4 @@
 
 
 (defn -main [& args]
-  (start-server #'app 9009))
+  (start-server #'app 3000))
