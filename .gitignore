@@ -15,3 +15,4 @@ chap03/target/classes
 /translator/.hgignore
 /translator/.nrepl-port
 /translator/.lein-repl-history
+/transcript-handler/.lein-repl-history
