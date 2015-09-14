@@ -9,10 +9,11 @@ chap03/.nrepl-port
 chap03/target
 chap03/target/classes
 /transcript-handler/target
-/transcript-handler/.hgignore
 /transcript-handler/.nrepl-port
+/transcript-handler/.lein-repl-history
 /translator/target
-/translator/.hgignore
 /translator/.nrepl-port
 /translator/.lein-repl-history
-/transcript-handler/.lein-repl-history
+/tournament-server/target
+/tournament-server/.nrepl-port
+/tournament-server/.lein-repl-history

@@ -1,0 +1,15 @@
+# -*- restclient -*-
+# Uses REST Client mode...
+# C-c C-v runs the query in another buffer
+# C-c C-p: jump to the previous query
+# C-c C-n: jump to the previous query
+# C-c C-u: copy curl command
+
+# Test tournament server
+GET http://localhost:4001/players
+
+# Add player
+PUT http://localhost:4001/players/paul
+
+# Add second player
+PUT http://localhost:4001/players/ringo
