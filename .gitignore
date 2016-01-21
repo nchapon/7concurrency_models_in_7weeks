@@ -17,3 +17,6 @@ chap03/target/classes
 /tournament-server/target
 /tournament-server/.nrepl-port
 /tournament-server/.lein-repl-history
+/CSP/channels/.nrepl-port
+/CSP/channels/target
+/CSP/channels/target/classes
