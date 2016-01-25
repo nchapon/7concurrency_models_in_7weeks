@@ -26,7 +26,7 @@
 
 ;; to-chan returns a channel containing the contents of a sequence
 (defn factor? [x y]
-  (zero? (mod x y)))
+  (zero? (mod y x)))
 
 
 (defn get-primes [limit]

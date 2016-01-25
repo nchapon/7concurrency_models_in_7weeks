@@ -20,3 +20,6 @@ chap03/target/classes
 /CSP/channels/.nrepl-port
 /CSP/channels/target
 /CSP/channels/target/classes
+/CSP/SieveTimeout/.nrepl-port
+/CSP/SieveTimeout/target
+/CSP/SieveTimeout/target/classes
