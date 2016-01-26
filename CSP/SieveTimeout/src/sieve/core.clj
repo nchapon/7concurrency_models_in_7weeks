@@ -3,12 +3,6 @@
              :exclude [map into reduce merge partition partition-by take]]
             [clojure.edn :as edn]))
 
-
-
-
-
-
-
 ;; to-chan returns a channel containing the contents of a sequence
 (defn factor? [x y]
   (zero? (mod y x)))
